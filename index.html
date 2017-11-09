@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>iSim | simulateur des circuits logiques</title>
+<link rel="shortcut icon" href="./codeSource/img/icon1.png" />
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/bootsnav.css" rel="stylesheet">
+<link rel="stylesheet" href="css/owl.carousel.css">
+<link rel="stylesheet" href="css/owl.theme.css">
+<link href="css/lightbox.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+  <div class="page-loader" style="display: none;">
+    <div class="loader" style="display: none;">
+      <span class="dot dot_1"></span>
+      <span class="dot dot_2"></span>
+      <span class="dot dot_3"></span>
+      <span class="dot dot_4"></span>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-default navbar-fixed white bootsnav on no-full navbar-transparent">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand" href="#brand">
+              <img src="img/logo-white.png" class="logo logo-display" alt="">
+              <img src="img/logo-black.png" class="logo logo-scrolled" alt="">
+            </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbar-menu">
+            <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+              <li><a href="#Acceuil">Acceuil</a></li>
+              <li><a href="#menu">Utiliser</a></li>
+              <li><a href="#equipe">Èquipe</a></li>
+              <li><a href="#contact">Contacter nous</a></li>
+            </ul>
+        </div>
+    </div>
+  </nav>
+
+
+  <section id="Acceuil" class="hero hero_full_screen hero_parallax parallax-window" data-stellar-background-ratio="0.5">
+    <div class="bg-overlay opacity-6">
+    </div>
+    <div class="hero_parallax_inner">
+      <div class="container">
+        <h1 class="big-slider-title" data-ix="slide-big-title" style="text-transform:none; font-size:150px; opacity: 1; transform: translateX(0px) translateY(0px); transition: opacity 500ms ease 0s, transform 500ms ease 0s;">iSim</h1>
+        <h3 class="slider-sub-txt white" data-ix="slide-sub-title" style="opacity: 1; transform: translateX(0px) translateY(0px); transition: opacity 500ms ease 0s, transform 500ms ease 0s;">simulateur des circuits logiques</h3>
+        <div class="slider-spc" data-ix="slide-spc" style="opacity: 1; transform: translateX(0px) translateY(0px); transition: opacity 500ms ease 0s, transform 500ms ease 0s;"><a class="button no-lft-mrg" href="codeSource/index.html">commencer</a><
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="menu" class="pt80 pb80">
+    <div class="container">
+      <div class="row">
+        <div class="com-sm-12">
+          <div class="header-section text-center mb40">
+            <h2 class="meta-title-2">Utiliser</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div id="work">
+          <div class="aisle-work text-center">
+            <div id="grid" class="aisle-work">
+              <div class="mix graphic webdesign col-md-4 col-sm-4" data-myorder="2" style="display: inline-block;">
+                <div class="image-wrapper">
+                  <img src="img/1.jpg" class="img-responsive">
+                  <div class="image-overlay">
+                    <a href="codeSource/index.html">
+                      <i class="fa fa-microchip"></i>
+                    </a>
+                    <h5>créer et simuler un circuit</h5>
+                    <p style="font-size:30px;">Créer</p>
+                  </div>
+                </div>
+              </div>
+              <div class="mix print  col-md-4 col-sm-4" data-myorder="2" style=" display: inline-block;">
+                <div class="image-wrapper">
+                  <img src="img/2.jpg" class="img-responsive">
+                  <div  class="image-overlay">
+                    <a  href="codeSource/index.html#bib">
+                      <i id="Library" class="fa fa-folder-open"></i>
+                    </a>
+                    <h5>Télécharger un circuit de la bibliothèque </h5>
+                    <p style="font-size:30px;">Télécharger</p>
+                  </div>
+                </div>
+              </div>
+              <div class="mix graphic  col-md-4 col-sm-4" data-myorder="2" style="display: inline-block;">
+                <div class="image-wrapper">
+                  <img src="img/3.jpg" class="img-responsive">
+                  <div class="image-overlay">
+                    <a href="Manuel/manuel.html">
+                      <i class="fa fa-question"></i>
+                    </a>
+                    <h5>comment utiliser le simulateur iSim ?</h5>
+                    <p style="font-size:30px;">Manuel</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="testimonial" class="pt80 pb80 bg-grey">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="text-center mb25">
+            <h2 style="text-transform:none;" ><i class="fa fa-quote-left" aria-hidden="true"></i> pourquoi iSim ?</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div id="features" class="owl-carousel owl-theme">
+          <div class="item features-content">
+            <h3>Puissance</h3>
+            <p>Modulaire, simple et ultra-efficace, son architecture maintient la Ram froide tout en permettant à presque toutes les fonctionnalités d'être ajoutées via les interactions de la souris. iSim offre une quantité incroyable de puissance dans un paquet étonnamment petit.</p>
+          </div>
+          <div class="item features-content">
+            <h3>Rapidité</h3>
+            <p>L'interface de simulation est basée sur une barre d'outils intuitive qui comporte toutes les fonctionalitées qui peuvent aider l'utilisateur pour une experience efficace et rapide. Les circuits peuvent être sauvegardés dans un fichier. Les composants du circuit sont : les entrées et les sorties, les portes, les multiplexeurs, les circuits arithmétiques, les bascules ...etc.</p>
+          </div>
+          <div class="item features-content">
+            <h3>Compatibilité</h3>
+            <p>HTML5, SVG, jQuery, Canvas, CSS, nouveaux navigateurs, anciens navigateurs, iSim s'entend bien avec tous les navigateurs Opera, Safari, Chrome et FireFox. Nous nous soucions de la compatibilité, de sorte que vous ne devez pas le faire.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="equipe" class="pb80 pt80">
+    <div class="container">
+      <div class="row">
+        <div class="header-section text-center mb40">
+          <h2 class="meta-title-2">Notre équipe</h2>
+        </div>
+      </div>
+
+
+
+      <div class="row">
+          <div class="heading-title text-center">
+              <p class="p-top-30 half-txt">Cette application web a été développée dans le cadre du projet pluridisciplinaire de fin de cycle préparatoire par des étudiants de l’école nationale supérieure d'informatique en deuxième année des classes préparatoires intégrées. </p>
+          </div>
+          <div class="col-md-4">
+              <div class="team-member">
+                  <div class="team-img">
+                      <img src="./img/aboulfeda.jpg" alt="team member" class="img-responsive">
+                  </div>
+                  <div class="team-hover">
+                      <div class="desk">
+                        <p>Nom : Bouregag </p>
+                        <p>Prénom : Abdelkader Abou El-feda </p>
+                        <p>Email : fa_bouregag@esi.dz </p>
+                      </div>
+                      <div class="s-link">
+                          <a href="#"><i class="fa fa-facebook"></i></a>
+                          <a href="#"><i class="fa fa-twitter"></i></a>
+                          <a href="#"><i class="fa fa-google-plus"></i></a>
+                      </div>
+                  </div>
+              </div>
+              <div class="team-title">
+                  <h5>BOUREGAG Abdelkader Abou El-Feda (CE) </h5>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="team-member">
+                  <div class="team-img">
+                      <img src="./img/kadar.jpg" alt="team member" class="img-responsive">
+                  </div>
+                  <div class="team-hover">
+                      <div class="desk">
+                        <p>Nom : Mekrache </p>
+                        <p>Prénom : Abdelkader </p>
+                        <p>Email : fa_mekrache@esi.dz </p>
+                      </div>
+                      <div class="s-link">
+                          <a href="#"><i class="fa fa-facebook"></i></a>
+                          <a href="#"><i class="fa fa-twitter"></i></a>
+                          <a href="#"><i class="fa fa-google-plus"></i></a>
+                      </div>
+                  </div>
+              </div>
+              <div class="team-title">
+                  <h5>MEKRACHE Abdelkader </h5>
+              </div>
+          </div>
+
+
+          <div class="col-md-4">
+              <div class="team-member">
+                  <div class="team-img ">
+                      <img src="./img/mossab.jpg" alt="team member" class="img-responsive">
+                  </div>
+                  <div class="team-hover">
+                      <div class="desk">
+                          <p>Nom : Djeradi </p>
+                          <p>Prénom : Moussaab </p>
+                          <p>Email : fm_djeradi@esi.dz </p>
+                      </div>
+                      <div class="s-link">
+                          <a href="#"><i class="fa fa-facebook"></i></a>
+                          <a href="#"><i class="fa fa-twitter"></i></a>
+                          <a href="#"><i class="fa fa-google-plus"></i></a>
+                      </div>
+                  </div>
+              </div>
+              <div class="team-title">
+                  <h5>Moussaab Djeradi</h5>
+              </div>
+          </div>
+
+      </div>
+<div class="row">
+    <div class="col-md-4">
+        <div class="team-member">
+            <div class="team-img">
+                <img src="./img/achraf.jpg" alt="team member" class="img-responsive">
+            </div>
+            <div class="team-hover">
+                <div class="desk">
+                    <p>Nom : Ameddah </p>
+                    <p>Prénom : Mohamed Achraf </p>
+                    <p>Email : fm_ameddah@esi.dz </p>
+                </div>
+                <div class="s-link">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-google-plus"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="team-title">
+            <h5>AMEDDAH Mohamed Achraf</h5>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="team-member">
+            <div class="team-img">
+                <img src="./img/rafik.jpg" alt="team member" class="img-responsive">
+            </div>
+            <div class="team-hover">
+                <div class="desk">
+                    <p>Nom : Tchoketch kebir </p>
+                    <p>Prénom : Rafik </p>
+                    <p>Email : fr_tchoketch_kebir@esi.dz </p>
+                </div>
+                <div class="s-link">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-google-plus"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="team-title">
+            <h5>TCHOKETCH KEBIR Rafik</h5>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="team-member">
+            <div class="team-img ">
+                <img src="./img/moh.jpg" alt="team member" class="img-responsive">
+            </div>
+            <div class="team-hover">
+                <div class="desk">
+                    <p>Nom : Mahammed chikouche </p>
+                    <p>Prénom : mohammed </p>
+                    <p>Email : fm_mahammed_chikouche@esi.dz</p>
+                </div>
+                <div class="s-link">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-google-plus"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="team-title">
+            <h5>MAHAMMED CHIKOUCHE Mohammed</h5>
+        </div>
+    </div>
+
+  </div>
+</div>
+</section>
+
+
+<br>
+<br>
+
+
+
+  <section id="contact" class="pb80 pt80 bg-grey">
+    <div class="container">
+      <div class="row">
+        <div class="header-section text-center mb40">
+          <h2 class="meta-title-2">Contacter nous</h2>
+        </div>
+      </div>
+      <div class="row margin-top-5">
+        <form id="contactusform" >
+          <div id="alert" class="zero-lr-margin" style="display: none;"></div>
+          <div class="col-md-6 col-sm-12 text-center center-col xs-margin-btm-ten">
+            <input name="name" placeholder="Nom" type="text">
+            <input name="email" placeholder="Email" type="text">
+            <textarea name="comment" placeholder="votre message ici."></textarea>
+            <input id="btn-contact" name="send" value="ENVOYER" class="margin-top-zero btn btn-black zero-margin-lr button-style-1" type="button">
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container inner">
+      <p class="pull-left white">© 2017. iSim | simulateur des circuits logique | projet 2CPI équipe 18.</p>
+    </div>
+  </footer>
+
+  <script  src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/bootsnav.js"></script>
+  <script src="js/owl.carousel.js"></script>
+  <script  src="js/counterup.min.js"></script>
+  <script>
+   $('.counter').counterUp({
+        delay: 10,
+        time: 1000
+    });
+  </script>
+  <script>
+  $("#features").owlCarousel({
+
+          navigation : true,
+          slideSpeed : 400,
+          paginationSpeed : 400,
+          singleItem:true,
+          autoPlay: true
+
+      });
+  </script>
+  <script src="js/lightbox-plus-jquery.min.js"></script>
+  <script src="js/jquery.mixitup.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script>
+  $(window).load(function(){
+    $(".page-loader").fadeOut("slow");
+  });
+    $.stellar();
+  </script>
+  <script>
+    $('#grid').mixItUp();
+  </script>
+
+  <script>
+    lightbox.option({
+      'resizeDuration': 200,
+      'wrapAround': true,
+      'fadeDuration':900,
+      'imageFadeDuration':600,
+      'positionFromTop':150,
+      'disableScrolling':true
+    })
+  </script>
+   <script>
+      $(document).ready(function(){
+        $(".navbar a, footer a[href='#myPage'], .overlay-detail a").on('click', function(event) {
+        event.preventDefault();
+        var hash = this.hash;
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 900, function(){
+          window.location.hash = hash;
+          });
+        });
+      })
+  </script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+body{
+	height: 6500px;
+	width: 100%;
+	position: absolute;
+	margin: 0px;
+	font-family: centrale_sans_roundedbook, sans-serif;
+	background-image: url("./img/back.png");
+	cursor: default;
+}
+.separer{
+	background: #5f5f5f;
+	left: 26%;
+	width: 50%;
+	padding: 1.5px;
+	position: relative;
+	box-shadow : 5px 14px 13px -1px rgba(50,50,50,1) ;
+
+}
+.navbar-brand img {
+    position: relative;
+    top: -30px;
+}
+.mokup{
+	position: relative;
+	display: none;
+}
+p{
+	font-weight: 400;
+    color: #5f5f5f;
+    font-variant: normal;
+    font-size: 20px;
+    line-height: 1.25;
+	text-align: justify;
+	padding-right: 15px;
+}
+h1 {
+    font-weight: 700;
+	display: none;
+    color: #5f5f5f;
+    font-variant: normal;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    font-size: 40px;
+    line-height: 1.25;
+	text-shadow: 0px 0.5px 2px#5f5f5f;
+}
+
+.fixed{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 99;
+	background: #DCDCDC;
+}
+#content1 {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	text-align: center;
+}
+#content2{
+	top:15%;
+	text-align: center;
+	position: relative;
+	height: 100% ;
+	width: 100% ;
+}
+
+
+.show{
+    position: absolute;
+    width:250px;
+    height: 50px;
+    border-radius: 20px;
+     box-shadow : 2px 4px 13px -3px rgba(50,50,50,1) ;
+    display: none;
+    text-align: center;
+    text-shadow: 1px;
+    padding-top: 5px;
+    font-size: 30px;
+    text-decoration: none;
+    color: #edecf2;
+
+
+}

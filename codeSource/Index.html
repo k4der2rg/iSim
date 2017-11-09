@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>iSim | Simulateur des circuits logique</title>
+	<link rel="shortcut icon" href="./img/icon1.png" />
+	<link href="designe.css" type="text/css" rel="stylesheet">
+	<link href="fontAwsome/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+	<link href="./introjs.css" type="text/css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="context.standalone.css">
+<!--  ==================================================== -->
+	<style type="text/css">
+		html,
+		body {
+			height: 100%;
+		}
+	</style>
+</head>
+<!--  ==================================================== -->
+<body id="body">
+
+	<div class="overlay">
+		<img id="logoImg" width="450px" height="150px" src="./img/logo1.png">
+		<div class="loader"></div>
+	</div>
+
+
+	<div id="windowbib">
+		<div id="navbarBib">
+			<p> Bibliothèque des circuits</p>
+			<img class="closeWindow" src="img/closeNote.png" alt="">
+		</div>
+		<div class="contenuBib" id="welcome">
+			<img src="img/circuits/welcome.png">
+		</div>
+		<div class="contenuBib" id="contenu2">
+			<img src="img/circuits/ADD_1Bit_Complet.png">
+			<p> Additionneur complet 1Bit :</p>
+		</div>
+		<div class="contenuBib" id="contenu3">
+			<img src="img/circuits/Cmp2Bits.png">
+			<p> Comparateur 2Bit :</p>
+		</div>
+		<div class="contenuBib" id="contenu4">
+			<img src="img/circuits/Compteur_Mod_8.png">
+			<p> Compteur Mod 8 :</p>
+		</div>
+		<div class="contenuBib" id="contenu5">
+			<img src="img/circuits/Mux_4---1.png">
+			<p> Multiplexeur 4 vers 1 :</p>
+		</div>
+		<div class="contenuBib" id="contenu6">
+			<img src="img/circuits/Registe_a_decalage_droite.png">
+			<p> Registre à décalage Droite :</p>
+		</div>
+		<div class="contenuBib" id="contenu7">
+			<img src="img/circuits/Registe_EP_SP.png">
+			<p> Registre entrées parallèles sorties parallèles :</p>
+		</div>
+		<div class="contenuBib" id="contenu8">
+			<img src="img/circuits/Registre_a_decalage_cerculaire.png">
+			<p> Registre à décalage circulaire :</p>
+		</div>
+
+		<button class="buttonBib" id="buttonBib1">
+			Accueil
+		</button>
+		<button class="buttonBib" id="buttonBib2">
+			Additionneur C 1Bit
+		</button>
+		<button class="buttonBib" id="buttonBib3">
+			Comparateur 2Bit
+		</button>
+		<button class="buttonBib" id="buttonBib4">
+			Compteur Mod 8
+		</button>
+		<button class="buttonBib" id="buttonBib5">
+			Multiplexeur 4 vers 1
+		</button>
+		<button class="buttonBib" id="buttonBib6">
+			Registre à décalage D
+		</button>
+		<button class="buttonBib" id="buttonBib7">
+			Registre EP SP
+		</button>
+		<button class="buttonBib" id="buttonBib8">
+			Registre à décalage C
+		</button>
+
+		<button id="buttonImporter" download>
+			<span > Télécharger ce circuit </span>
+		</button>
+	</div>
+
+
+
+	<div id="navsbarId" class="navsbar">
+		<a id="logo" href="../index.html">
+			<img src="img/logo.png" data-step="15" data-intro="Merci d'avoir utiliser notre application." data-position='bottom'>
+		</a>
+
+		<div class="navbarsection" id="project">
+			<div class="buttons">
+				<img id="upload" src="img/openn.png" data-step="7" data-intro="Vous pouvez importer des circuits enregistrés sous extention ‘.iSim’" data-position='right' title="Importer">
+			</div>
+			<div class="buttons">
+				<img id="sauv" src="img/savee.png" data-step="6" data-intro="Telecharger votre travail sur votre machine et l'importer plus tard." data-position='right' title="Télecharger">
+			</div>
+			<div class="buttons">
+				<img id="previous" src="img/previouss.png" data-step="8" data-intro="revenir en arrière si vous avez trompé" data-position='right' title="Retour">
+			</div>
+			<div class="buttons">
+				<img id="next" src="img/nextt.png" title="Avancer">
+			</div>
+			<div class="buttons">
+				<img id="buttonClean" src="img/trashh.png" data-step="9" data-intro="Supprimez les elements sélectionnés" data-position='right' title="Supprimer">
+			</div>
+			<div class="buttons" id="help">
+				<img src="img/help.png" data-intro='Bienvenue, on va vous guider sur les principes de cette application' title="Guide">
+			</div>
+		</div>
+		<div class="navbarsection" id="run">
+			<div class="buttons">
+				<img id="runn" src="img/startt.png" data-step="10" data-intro="Lancer la simulation" data-position='right' title="Simuler">
+
+			</div>
+			<div class="buttons">
+				<img id="stop" src="img/stopp.png" title="Arreter">
+			</div>
+			<div class="buttons">
+				<img id="fullscreenButton" src="img/fullscreen.png" data-step="11" data-intro="Travailler en plein-écran" data-position='right' title="Plein-écran">
+			</div>
+			<div class="buttons">
+				<img id="Library" src="img/library.png" data-step="12" data-intro="Naviguer dans la bibliotheques des circuits deja creés" data-position='right' title="Bibliothèque des circuits">
+			</div>
+			<div class="buttons">
+				<img id="buttonNote" src="img/note.png" data-step="13" data-intro="Ajouter un commentaire" data-position='right' title="Ajouter un commentaire">
+			</div>
+			<div class="buttons">
+				<img id="inverser" src="img/inverser.png" data-step="14" data-intro="Inverser une entrée" data-position='right' title="Inverser une entrée">
+			</div>
+			<a class="buttons" href="../Manuel/manuel.html">
+					<img  src="img/manuel.png" title="Manuel" >
+			</a>
+		</div>
+
+		<div id="buttonChronoParent" class="navbarsection">
+			<div id="buttonChrono" class="buttons">
+				<p> Chronogrammes </p>
+				<img id="arrow" src="img/arrow.png">
+			</div>
+		</div>
+
+		<div id ="navsbarMenu" class="buttons">
+				<img id="navsbarMenuButton" src="img/list.png">
+
+				<div class="buttonsMenu">
+						<img  id="upload" src="img/openn.png"  >
+				</div>
+				<div class="buttonsMenu">
+						<img id="sauv" src="img/savee.png"  >
+				</div>
+				<div class="buttonsMenu">
+						<img id ="previous" src="img/previouss.png" >
+				</div>
+				<div class="buttonsMenu">
+						<img id ="next" src="img/nextt.png" >
+				</div>
+				<div class="buttonsMenu">
+						<img id="buttonClean" src="img/trashh.png" >
+				</div>
+				<div class="buttonsMenu"id="help">
+						<img  src="img/help.png" >
+				</div>
+				<div class="buttonsMenu">
+						<img id="runn" src="img/startt.png" >
+				</div>
+				<div class="buttonsMenu">
+						<img id="stop" src="img/stopp.png" >
+				</div>
+				<div class="buttonsMenu" >
+						<img id="fullscreenButton" src="img/fullscreen.png" >
+				</div>
+				<div class="buttonsMenu">
+						<img id="Library" src="img/library.png" >
+				</div>
+				<div class="buttonsMenu">
+						<img id="buttonNote" src="img/note.png" >
+				</div>
+				<div class="buttonsMenu">
+						<img id="inverser" src="img/inverser.png" >
+				</div>
+				<a class="buttonsMenu" href="../Manuel/manuel.html">
+						<img  src="img/manuel.png" >
+				</a>
+		</div>
+
+	</div>
+
+
+	<div id="ChronoSpace" data-step="5" data-intro="L'espace pour tracer des chronogrammes." data-position='left'>
+
+		<div id="chronobar">
+			<div class="buttonsChr" id="startChrono">
+				<img src="img/startt.png">
+			</div>
+			<div class="buttonsChr" id="pauseChrono">
+				<img src="img/stopp.png">
+			</div>
+			<div class="buttonsChr" id="speedmoins">
+				<img src="img/moins.png">
+			</div>
+			<div class="buttonsChr" id="nbChrs">
+				<img id="imgNbChr" src="img/2.png">
+			</div>
+			<div class="buttonsChr" id="speedplus" >
+				<img src="img/plus.png">
+			</div>
+			<div class="buttonsChr" id="addChrono">
+				<img src="img/addC.png">
+			</div>
+
+		</div>
+	</div>
+
+	<div id="espace" class="espace">
+
+
+		<div id="buttonMenu">
+			<img id="arrow2" src="img/arrow.png">
+		</div>
+		<div id="Menu" data-step="2" data-intro="Ici c'est la barre du Menu, ou se trouvent les elements logiques." data-position='right'>
+
+
+			<div class="search-wrapper" data-step="3" data-intro="Vous pouvez rechercher n'importe quel composentt avec son nom." data-position='right'>
+				<div class="input-holder">
+					<input type="text" class="search-input" autocomplete="off" placeholder="Chercher" id="filter" value="" />
+					<button class="search-icon" onclick="searchToggle(this, event);"><span></span></button>
+				</div>
+				<span class="close" onclick="searchToggle(this, event);"></span>
+				<div class="result-container">
+
+				</div>
+			</div>
+
+
+
+			<div class="menusection" data-step="4" data-intro="Pour ajouter un élément il suffit d'appuyer longtemps sur l’élément et de le glisser vers l’espace de travail pour le positionner." data-position='right'>
+				<div id="Rslt" class="section" onclick="hid('combi');">Combinatoire simple </div>
+				<div id="combi">
+					<div id="switch" name="switch" class="node switch" onmouseover="switchH(id);" onmouseout="leave();" value="0"><img class="image" id="switch" src="img/in-off.png"></div>
+					<div id="OUI" name="yes" class="node " onmouseover="switchH(id);" onmouseout="leave();"><img id="OUI" class="image" src="img/gate-oui.png"></div>
+					<div id="NOT" name="porte not" class="node " onmouseover="switchH(id);" onmouseout="leave();"><img id="NOT" class="image" src="img/gate-not.png"></div>
+					<div id="ORR" name="porte or" class="node gate" onmouseover="switchH(id);" onmouseout="leave();"><img id="ORR" class="image" src="img/gate-or.png"></div>
+					<div id="XOR" name="porte xor" class="node gate" onmouseover="switchH(id);" onmouseout="leave();"><img id="XOR" class="image" src="img/gate-xor.png"></div>
+					<div id="NOR" name="porte nor" class="node gate" onmouseover="switchH(id);" onmouseout="leave();"><img id="NOR" class="image" src="img/gate-nor.png"></div>
+					<div id="ANND" name="porte and" class="node gate" onmouseover="switchH(id);" onmouseout="leave();"><img id="ANND" class="image" src="img/gate-and.png"></div>
+					<div id="NAND" name="porte nand" class="node gate" onmouseover="switchH(id);" onmouseout="leave();"><img id="NAND" class="image" src="img/gate-nand.png"></div>
+					<div id="led" name="lampe led" class="node led" onmouseover="switchH(id);" onmouseout="leave();"><img id="led" class="image" src="img/out-off.png"></div>
+					<div id="HEX" name="Afficheur hex" class="node" onmouseover="switchH(id);" onmouseout="leave();"><img id="HEX" class="image" src="img/HEX/HEX.png"></div>
+
+				</div>
+
+				<div id="Rslt" class="section rsltt" onclick="hid('combicpl');">Combinatoire complexe</div>
+				<div id="combicpl">
+					<div id="DECOD" name="decoder" class="node gate"><img class="image" src="img/decodeur.png"></div>
+					<div id="ENCOD" name="encoder" class="node gate"><img class="image" src="img/encodeur.png"></div>
+					<div id="MUXX" name="multiplexeur" class="node gate"><img class="image" src="img/mux2-1.png"></div>
+					<div id="DEMUX" name="demultiplexeur" class="node gate"><img class="image" src="img/demux.png"></div>
+					<div id="ADDc" name="additionneur ADDc" class="node gate "><img class="image" src="img/add.png"></div>
+					<div id="Sous" name="Soustracteur SOUS" class="node gate"><img class="image" src="img/sous.png"></div>
+					<div id="CMP" name="comparateur CMP" class="node gate"><img class="image" src="img/comp.png"></div>
+				</div>
+
+				<div class="menusection">
+					<div class="section rsltt" onclick="hid('seq');">Sequentiel simple</div>
+					<div id="seq">
+						<div id="Horloge" name="horloge" class="node"><img class="image" src="img/clock-off.png"></div>
+						<div id="DFF" name="bascule D" class="node onlyckl"><img class="image" src="img/D.png" width="52" height="52"></div>
+						<div id="TFF" name="bascule T" class="node onlyckl"><img class="image" src="img/T.png"></div>
+						<div id="JKFF" name="bascule JK" class="node onlyckl"><img class="image" src="img/JK.png"></div>
+						<div id="RSFF" name="bascule RS" class="node"><img class="image" src="img/RS.png"></div>
+						<div id="RSHFF" name="bascule RSH" class="node onlyckl"><img class="image" src="img/RSH.png"></div>
+					</div>
+				</div>
+
+				<div class="section rsltt" onclick="hid('seqcpl');">Sequentiel complexe</div>
+				<div id="seqcpl">
+					<div id="Compteur" name="compteur" class="node"><img class="image" id="cpt" src="img/cpt.png"></div>
+					<div id="REG_UNIVER" name="registre universel" class="node"><img class="image" id="REG" src="img/reg_univ.png"></div>
+				</div>
+			</div>
+
+		</div>
+
+
+		<div id="boutonAddEspace"><img src="img/+.png" width="40px" height="35px" style="margin-top:-2px; margin-left:-4px;"></div>
+		<div id="boutonRemoveEspace"><img src="img/-.png" width="35px" height="35px" style="margin-top:-2px;margin-left:-2.6px;"></div>
+
+		<div id="workspace">
+
+
+		</div>
+
+	</div>
+
+
+
+	<script type='text/javascript' src="bootstrap/jquery-3.2.0.js"></script>
+	<script type='text/javascript' src="bootstrap/js/bootstrap.min.js"></script>
+	<script type='text/javascript' src="bootstrap/js/bootstrap.js"></script>
+	<script type='text/javascript' src='JQ/jquery.min.js'></script>
+	<script type='text/javascript' src='JQ/jquery-ui.js'></script>
+	<script type="text/javascript" src="scripts.js"></script>
+	<script type="text/javascript" src="LogicGates.js"></script>
+	<script type="text/javascript" src="Afficheur.js"></script>
+	<script type="text/javascript" src="Events.js"></script>
+	<script type="text/javascript" src="Lines.js"></script>
+	<script type="text/javascript" src="Sequentiel.js"></script>
+	<script type="text/javascript" src="Chronogrammes.js"></script>
+	<script type="text/javascript" src="etiquette.js"></script>
+	<script type="text/javascript" src="medias.js"></script>
+	<script type="text/javascript" src="clavier.js"></script>
+	<script type="text/javascript" src="menu.js"></script>
+	<script type="text/javascript" src="context.js"></script>
+	<script type="text/javascript" src="intro.js"></script>
+
+
+<!--  ==================================================== -->
+
+	<script>
+		context.init({
+			preventDoubleContext: false
+		});
+		context.attach('#workspace', test_menu2);
+	</script>
+	<!--  ======================================================= -->
+
+
+</body>
+
+</html>
