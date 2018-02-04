@@ -4,12 +4,15 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html" charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="iSim est une application web pédagogique d'édition et simulation des circuits logiques combinatoires est séquentiels">
 	<title>iSim | Simulateur des circuits logique</title>
 	<link rel="shortcut icon" href="./img/icon1.png" />
 	<link href="designe.css" type="text/css" rel="stylesheet">
 	<link href="fontAwsome/css/font-awesome.min.css" type="text/css" rel="stylesheet">
 	<link href="./introjs.css" type="text/css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="context.standalone.css">
+	<script type="text/javascript" src="preload.js"></script>
+	
 <!--  ==================================================== -->
 	<style type="text/css">
 		html,
@@ -19,10 +22,10 @@
 	</style>
 </head>
 <!--  ==================================================== -->
-<body id="body">
+<body id="body" onload="preload()" >
 
 	<div class="overlay">
-		<img id="logoImg" width="450px" height="150px" src="./img/logo1.png">
+		<img id="logoImg" width="450px" height="150px" src="./img/logo1.png" alt="iSim simulation de circuit logique">
 		<div class="loader"></div>
 	</div>
 
@@ -98,12 +101,12 @@
 
 	<div id="navsbarId" class="navsbar">
 		<a id="logo" href="../index.html">
-			<img src="img/logo.png" data-step="15" data-intro="Merci d'avoir utiliser notre application." data-position='bottom'>
+			<img src="img/logo.png" data-step="15" data-intro="Merci d'avoir utiliser notre application." data-position='bottom' alt="iSim simulation de circuit logique">
 		</a>
 
 		<div class="navbarsection" id="project">
 			<div class="buttons">
-				<img id="upload" src="img/openn.png" data-step="7" data-intro="Vous pouvez importer des circuits enregistrés sous extention ‘.iSim’" data-position='right' title="Importer">
+				<img id="upload" src="img/openn.png" data-step="7" data-intro="Vous pouvez importer des circuits enregistrés sous extention ‘.iSim’" data-position='right' title="Importer fichier.isim">
 			</div>
 			<div class="buttons">
 				<img id="sauv" src="img/savee.png" data-step="6" data-intro="Telecharger votre travail sur votre machine et l'importer plus tard." data-position='right' title="Télecharger">
@@ -171,7 +174,7 @@
 				<div class="buttonsMenu">
 						<img id="buttonClean" src="img/trashh.png" >
 				</div>
-				<div class="buttonsMenu"id="help">
+				<div class="buttonsMenu" id="help">
 						<img  src="img/help.png" >
 				</div>
 				<div class="buttonsMenu">
@@ -265,31 +268,31 @@
 
 				<div id="Rslt" class="section rsltt" onclick="hid('combicpl');">Combinatoire complexe</div>
 				<div id="combicpl">
-					<div id="DECOD" name="decoder" class="node gate"><img class="image" src="img/decodeur.png"></div>
-					<div id="ENCOD" name="encoder" class="node gate"><img class="image" src="img/encodeur.png"></div>
-					<div id="MUXX" name="multiplexeur" class="node gate"><img class="image" src="img/mux2-1.png"></div>
-					<div id="DEMUX" name="demultiplexeur" class="node gate"><img class="image" src="img/demux.png"></div>
-					<div id="ADDc" name="additionneur ADDc" class="node gate "><img class="image" src="img/add.png"></div>
-					<div id="Sous" name="Soustracteur SOUS" class="node gate"><img class="image" src="img/sous.png"></div>
-					<div id="CMP" name="comparateur CMP" class="node gate"><img class="image" src="img/comp.png"></div>
+					<div id="DECOD" name="decoder" class="node gate"><img class="image" src="img/decodeur.png" alt="decodeur"></div>
+					<div id="ENCOD" name="encoder" class="node gate"><img class="image" src="img/encodeur.png" alt="endecodeur"></div>
+					<div id="MUXX" name="multiplexeur" class="node gate"><img class="image" src="img/mux2-1.png" alt="multiplexeur"></div>
+					<div id="DEMUX" name="demultiplexeur" class="node gate"><img class="image" src="img/demux.png" alt="demultiplexeur"></div>
+					<div id="ADDc" name="additionneur ADDc" class="node gate "><img class="image" src="img/add.png" alt="additionneur"></div>
+					<div id="Sous" name="Soustracteur SOUS" class="node gate"><img class="image" src="img/sous.png" alt="Soustracteur"></div>
+					<div id="CMP" name="comparateur CMP" class="node gate"><img class="image" src="img/comp.png" alt="comparateur"></div>
 				</div>
 
 				<div class="menusection">
 					<div class="section rsltt" onclick="hid('seq');">Sequentiel simple</div>
 					<div id="seq">
 						<div id="Horloge" name="horloge" class="node"><img class="image" src="img/clock-off.png"></div>
-						<div id="DFF" name="bascule D" class="node onlyckl"><img class="image" src="img/D.png" width="52" height="52"></div>
-						<div id="TFF" name="bascule T" class="node onlyckl"><img class="image" src="img/T.png"></div>
-						<div id="JKFF" name="bascule JK" class="node onlyckl"><img class="image" src="img/JK.png"></div>
-						<div id="RSFF" name="bascule RS" class="node"><img class="image" src="img/RS.png"></div>
-						<div id="RSHFF" name="bascule RSH" class="node onlyckl"><img class="image" src="img/RSH.png"></div>
+						<div id="DFF" name="bascule D" class="node onlyckl"><img class="image" src="img/D.png" width="52" height="52" alt="bascule D"></div>
+						<div id="TFF" name="bascule T" class="node onlyckl"><img class="image" src="img/T.png" alt="bascule T"></div>
+						<div id="JKFF" name="bascule JK" class="node onlyckl"><img class="image" src="img/JK.png" alt="bascule JK"></div>
+						<div id="RSFF" name="bascule RS" class="node"><img class="image" src="img/RS.png" alt="bascule RS"></div>
+						<div id="RSHFF" name="bascule RSH" class="node onlyckl"><img class="image" src="img/RSH.png" alt="bascule RSH"></div>
 					</div>
 				</div>
 
 				<div class="section rsltt" onclick="hid('seqcpl');">Sequentiel complexe</div>
 				<div id="seqcpl">
-					<div id="Compteur" name="compteur" class="node"><img class="image" id="cpt" src="img/cpt.png"></div>
-					<div id="REG_UNIVER" name="registre universel" class="node"><img class="image" id="REG" src="img/reg_univ.png"></div>
+					<div id="Compteur" name="compteur" class="node"><img class="image" id="cpt" src="img/cpt.png" alt="Compteur"></div>
+					<div id="REG_UNIVER" name="registre universel" class="node"><img class="image" id="REG" src="img/reg_univ.png" alt="registre universel"></div>
 				</div>
 			</div>
 
@@ -326,6 +329,8 @@
 	<script type="text/javascript" src="menu.js"></script>
 	<script type="text/javascript" src="context.js"></script>
 	<script type="text/javascript" src="intro.js"></script>
+
+
 
 
 <!--  ==================================================== -->

@@ -895,3 +895,8 @@ h4 {
     color: #a5a5a5;
     letter-spacing: 1px;
 }
+.copyleft {
+  display:inline-block;
+  transform: rotate(180deg);
+  font: 20px Arial, sans-serif;
+}
