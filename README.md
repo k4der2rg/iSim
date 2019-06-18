@@ -21,7 +21,7 @@ Pour plus d'informations sur la barre d'outil consulter le [manuelle d'utilistio
 
 ### Prerequisites
 
-Module d'architicture 1/2.
+Module d'architicture 1/2. 
 
 ## Built With
 
