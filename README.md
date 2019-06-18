@@ -1,6 +1,6 @@
 # iSim
 
-application d'édition et de simulation des circuits logique combinatoires et séquentiels
+Application d'édition et de simulation des circuits logique combinatoires et séquentiels
 
 ## Getting Started
 
